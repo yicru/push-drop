@@ -34,6 +34,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a6c94301-2597-4b73-8e1d-192e839dc6f3"
+      }
+    },
+    "owner": "yicru"
   }
 }

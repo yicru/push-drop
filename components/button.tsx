@@ -5,9 +5,15 @@ import { Text, TouchableOpacity } from 'react-native'
 interface ButtonProps
   extends ComponentPropsWithoutRef<typeof TouchableOpacity> {
   children: string
+  labelClassName?: string
 }
 
-export function Button({ children, className, ...props }: ButtonProps) {
+export function Button({
+  children,
+  className,
+  labelClassName,
+  ...props
+}: ButtonProps) {
   return (
     <TouchableOpacity
       className={cn(
@@ -16,7 +22,12 @@ export function Button({ children, className, ...props }: ButtonProps) {
       )}
       {...props}
     >
-      <Text className={'text-center font-medium text-white text-base'}>
+      <Text
+        className={cn(
+          'text-center font-medium text-white text-base',
+          labelClassName,
+        )}
+      >
         {children}
       </Text>
     </TouchableOpacity>
