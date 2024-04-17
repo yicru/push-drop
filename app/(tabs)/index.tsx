@@ -84,9 +84,9 @@ export default function HomeScreen() {
     const base64 = assets?.[0].base64
     if (!base64) return
 
-    const isExceed100Kb = base64.length > 1024 * 100
-    if (isExceed100Kb) {
-      alert('100KBを超えるファイルは送信できません。')
+    const isExceed500Kb = base64.length > 1024 * 500
+    if (isExceed500Kb) {
+      alert('500KBを超えるファイルは送信できません。')
       return
     }
 
